@@ -14,5 +14,12 @@ class Settings(BaseSettings):
     API_TIMEOUT: int = Field(30, description="Default timeout in seconds")
     
     LOG_LEVEL: str = Field("INFO", description="Logging level")
+    
+    # OpenRouter LLM Configuration
+    OPENROUTER_API_KEY: Optional[str] = Field(None, description="OpenRouter API Key")
+    OPENROUTER_BASE_URL: str = Field("https://openrouter.ai/api/v1", description="OpenRouter base URL")
+    LLM_MODEL: str = Field("openai/gpt-4-turbo", description="LLM model to use")
+    LLM_TEMPERATURE: float = Field(0.0, description="LLM temperature for responses")
+    LLM_MAX_TOKENS: int = Field(1000, description="Maximum tokens for LLM responses")
 
 settings = Settings()

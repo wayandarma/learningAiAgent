@@ -5,3 +5,8 @@ tenacity>=8.2.0
 python-dotenv>=1.0.0
 pytest>=7.0.0
 pytest-mock>=3.10.0
+
+# LangChain dependencies
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
