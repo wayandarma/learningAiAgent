@@ -100,12 +100,18 @@ The Weather AI Agent is a conversational AI application that combines the power 
    ```bash
    python -m src.main
    ```
+   
+   To run in **debug mode** (shows detailed logs and agent thinking process):
+   ```bash
+   python -m src.main --debug
+   ```
 
 3. **Interact with the agent**:
    
    Once started, you can ask weather-related questions:
    ```
    You: What's the weather in New York?
+   🤔 Checking weather data...
    🤖 Agent: [Detailed weather information for New York]
    
    You: Will it rain in Seattle tomorrow?

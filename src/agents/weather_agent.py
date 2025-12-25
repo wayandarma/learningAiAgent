@@ -60,7 +60,7 @@ class WeatherAgent:
         self.agent_executor = AgentExecutor(
             agent=self.agent,
             tools=self.tools,
-            verbose=True,
+            verbose=settings.DEBUG,
             max_iterations=3,
             handle_parsing_errors=True
         )

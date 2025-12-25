@@ -15,7 +15,13 @@ def setup_logger(name: str) -> logging.Logger:
     logger.setLevel(settings.LOG_LEVEL)
     
     handler = logging.StreamHandler(sys.stdout)
-    handler.setLevel(settings.LOG_LEVEL)
+    
+    # In production/default mode, we only want to show WARNINGs and above to console
+    # To keep the UI clean
+    if settings.DEBUG:
+        handler.setLevel(settings.LOG_LEVEL)
+    else:
+        handler.setLevel(logging.WARNING)
     
     # JSON-like structured format is often preferred in production, 
     # but a readable format is better for development. 
